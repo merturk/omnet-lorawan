@@ -26,53 +26,51 @@ namespace lorawan {
 /**
  * TODO - Generated class
  */
-class Node : public cSimpleModule
-{
+class Node: public cSimpleModule {
 
 private:
     // parameters
-      simtime_t radioDelay;
-      double txRate;
-      cPar *iaTime;
-      cPar *pkLenBits;
-      simtime_t slotTime;
-      bool isSlotted;
+    simtime_t radioDelay;
+    double txRate;
+    cPar *iaTime;
+    cPar *pkLenBits;
+    simtime_t slotTime;
+    bool isSlotted;
 
+    int bw;
+    int sf = 12;
+    int nPreambles;
+    int headerEn;
+    int crc;
+    int codingRate;
 
-      int bw;
-      int sf;
-      int nPreambles;
-           int headerEn;
-           int crc;
-           int codingRate;
+    double ex;
+    double rad;
+    double plc;
 
+    // state variables, event pointers etc
+    cModule *gw;
+    cMessage *endTxEvent = nullptr;
+    enum {
+        IDLE = 0, TRANSMIT = 1
+    } state;
+    simsignal_t stateSignal;
+    int pkCounter;
 
-           double ex;
-           double rad;
-           double plc;
+    // position on the canvas, unit is m
+    double x, y;
 
-      // state variables, event pointers etc
-      cModule *gw;
-      cMessage *endTxEvent = nullptr;
-      enum { IDLE = 0, TRANSMIT = 1 } state;
-      simsignal_t stateSignal;
-      int pkCounter;
+    // speed of light in m/s
+    const double propagationSpeed = 299792458.0;
 
-      // position on the canvas, unit is m
-      double x, y;
-
-      // speed of light in m/s
-      const double propagationSpeed = 299792458.0;
-
-
-      cPacket *lastPacket = nullptr; // a copy of the last sent message, needed for animation
-      mutable cRingFigure *transmissionRing = nullptr; // shows the last packet
-      mutable std::vector<cOvalFigure *> transmissionCircles; // ripples inside the packet ring
+    cPacket *lastPacket = nullptr; // a copy of the last sent message, needed for animation
+    mutable cRingFigure *transmissionRing = nullptr; // shows the last packet
+    mutable std::vector<cOvalFigure*> transmissionCircles; // ripples inside the packet ring
 
 public:
-      virtual ~Node();
+    virtual ~Node();
 
-  protected:
+protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
     virtual void finish() override;

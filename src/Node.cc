@@ -90,12 +90,15 @@ void Node::handleMessage(cMessage *msg) {
         cPacket *pk = new cPacket(pkname);
         pk->setBitLength(pkLenBits->intValue());
 
+        if (sf < 7 || sf > 12)
+            sf = 12;
 
         double toa = util.toa(pkLenBits->intValue() / 8, sf, bw, nPreambles, headerEn, crc, codingRate);
-
         simtime_t duration = SimTime(toa * 1000, SIMTIME_MS);
 
         //sendDirect(pk, radioDelay, duration, gw->gate("in"));
+
+        EV << "Before senddirect sf: "<< sf << "duration: "<< duration <<"\n";
         sendDirect(pk, radioDelay, duration, gw->gate("into", sf-7));
 
         scheduleAt(simTime() + duration, endTxEvent);
