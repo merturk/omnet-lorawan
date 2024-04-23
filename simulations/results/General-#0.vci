@@ -1,0 +1,163 @@
+file 4296 1713886486                                            
+version 3
+run General-0-20240423-17:48:02-39320
+attr configname General
+attr datetime 20240423-17:48:02
+attr datetimef 20240423-174802
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network LoRaWANNetwork
+attr processid 39320
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network LoRaWANNetwork
+config LoRaWANNetwork.numNodes 20
+config LoRaWANNetwork.nodes[*].pkLenBits 80b
+config *.nodes[*].x exponential(4000m)
+config *.nodes[*].y exponential(4000m)
+config **.iaTime exponential(2s)
+config **.bw 125000
+config **.headerEn 0
+config **.nPreambles 8
+config **.codingRate 1
+config **.crc 1
+config **.ex 3.76
+config **.rad 1.0
+config **.plc 7.7
+config *.gw.x 2500m
+config *.gw.y 2500m
+
+vector 0 LoRaWANNetwork.gw gwChannelState:vector ETV
+attr enum IDLE=0,TRANSMISSION=1,COLLISION=2
+attr recordingmode vector
+attr source channelState
+attr title "Channel state"
+vector 1 LoRaWANNetwork.nodes[0] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 2 LoRaWANNetwork.nodes[1] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 3 LoRaWANNetwork.nodes[2] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 4 LoRaWANNetwork.nodes[3] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 5 LoRaWANNetwork.nodes[4] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 6 LoRaWANNetwork.nodes[5] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 7 LoRaWANNetwork.nodes[6] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 8 LoRaWANNetwork.nodes[7] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 9 LoRaWANNetwork.nodes[8] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 10 LoRaWANNetwork.nodes[9] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 11 LoRaWANNetwork.nodes[10] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 12 LoRaWANNetwork.nodes[11] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 13 LoRaWANNetwork.nodes[12] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 14 LoRaWANNetwork.nodes[13] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 15 LoRaWANNetwork.nodes[14] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 16 LoRaWANNetwork.nodes[15] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 17 LoRaWANNetwork.nodes[16] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 18 LoRaWANNetwork.nodes[17] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 19 LoRaWANNetwork.nodes[18] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 20 LoRaWANNetwork.nodes[19] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+0	4068 56 0 0 0 0 7 0 0 0 0
+1	4124 8 0 0 0 0 1 0 0 0 0
+2	4132 8 0 0 0 0 1 0 0 0 0
+3	4140 8 0 0 0 0 1 0 0 0 0
+4	4148 8 0 0 0 0 1 0 0 0 0
+5	4156 8 0 0 0 0 1 0 0 0 0
+6	4164 8 0 0 0 0 1 0 0 0 0
+7	4172 8 0 0 0 0 1 0 0 0 0
+8	4180 8 0 0 0 0 1 0 0 0 0
+9	4188 8 0 0 0 0 1 0 0 0 0
+10	4196 9 0 0 0 0 1 0 0 0 0
+11	4205 9 0 0 0 0 1 0 0 0 0
+12	4214 9 0 0 0 0 1 0 0 0 0
+13	4223 9 0 0 0 0 1 0 0 0 0
+14	4232 9 0 0 0 0 1 0 0 0 0
+15	4241 9 0 0 0 0 1 0 0 0 0
+16	4250 9 0 0 0 0 1 0 0 0 0
+17	4259 9 0 0 0 0 1 0 0 0 0
+18	4268 9 0 0 0 0 1 0 0 0 0
+19	4277 9 0 0 0 0 1 0 0 0 0
+20	4286 9 0 0 0 0 1 0 0 0 0
+
