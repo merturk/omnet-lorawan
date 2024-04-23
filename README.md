@@ -15,7 +15,13 @@ Step 1:
 
 Download and install Omnet++ from [https://omnetpp.org/download/](https://omnetpp.org/download/)
 
-Step 2:
+Step 2: Import project 
 ![Import project](https://github.com/merturk/omnet-lorawan/blob/master/docs/Doc1.png?raw=true "Import LoRaWAN Omnet Simulator")
 
+![Import project](https://github.com/merturk/omnet-lorawan/blob/master/docs/Doc2.png?raw=true "Import LoRaWAN Omnet Simulator")
 
+Step 3: Build and run the example. 
+
+![Import project](https://github.com/merturk/omnet-lorawan/blob/master/docs/Doc3.png?raw=true "Import LoRaWAN Omnet Simulator")
+
+![Import project](https://github.com/merturk/omnet-lorawan/blob/master/docs/Doc4.png?raw=true "Import LoRaWAN Omnet Simulator")
